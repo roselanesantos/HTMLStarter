@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Assignment 1 (HTML) of the course COMP1002 HTML, CSS, and JS Fundamentals</title>
+        <meta name="author" content="Roselane Gonçalves dos Santos" />
+        <meta name="description" content="This HTML code is a page containing a form providing a variety of inputs and controls that can allow a user to order one or more pizzas">
+        <link rel="shortcut icon" href="images/icon_pizza.png" type="image/x-icon" />
+		<link rel="stylesheet" href="css/styles.css" />
+    </head>
+    <body>
+        <!-- Page-level header -->
+        <header>
+			<h1> Welcome to Rose's pizza</h1>
+			<h2>The best pizza from Minas Gerais Brazil in Toronto!</h2>
+		</header>
+        <!-- Page-level main content -->
+        <main>
+            <!-- News Section -->
+            <section>
+                <!-- First imagem -->
+                <figure>
+                    <img src="images/pizza_1.png" height="571" width="573" alt="A figure of the pizza">
+                </figure>
+
+                <!-- Form attribute pointing to a named file and setting the method attribute to "get" -->
+                <!--This part of the code brings order delay information-->
+                <form action="OrderPizza.php" method="get">
+
+                    <h2>Order Details</h2>
+
+                    <!--Selecting the number of pizza-->
+                    <label for="quantity">Select Number of Pizzas (between 1 and 20):</label>
+                    <input type="number" id="quantity" name="quantity" min="1" max="20"><br><br>
+                    
+                    <!--Selecting the size of the pizza-->
+                    <label for="pizzas">Select the Size (number of slices):</label>
+                    <select id="size" name="size" required>
+                        <option value="4 slices">4 slices</option>
+                        <option value="6 slices">6 slices</option>
+                        <option value="8 slices">8 slices</option>
+                        <option value="12 slices">12 slices</option>
+                    </select><br><br>
+
+                    <!--Selecting the pizza shape-->
+                    <label for="shape">Shape:</label>
+                    <select id="shape" name="shape" required>
+                        <option value="round">Round</option>
+                        <option value="square">Square</option>
+                    </select><br><br>
+
+                    <!--Selecting pizza toppings-->
+                    <label for="Toppings">Select the Toppings</label>
+                    <select id="Toppings" name="Toppings" required>
+                        <option value="Margherita">Margherita</option>
+                        <option value="Vegetariana">Vegetariana</option>
+                        <option value="Pepperoni">Pepperoni</option>
+                        <option value="Chicken With Cream Cheese">Chicken With Cream Cheese</option>
+                        <option value="Four cheeses mozzarella, swiss, parmesan and provolone">Four cheeses mozzarella, swiss, parmesan and provolone</option>
+                        <option value="Calabrian">Calabrian</option>
+                    </select><br><br>
+
+                    <!--Selecting pizza Crust-->
+                    <label>Select the Crust:</label><br>
+                    <input type="radio" id="TraditionalCrust" name="Crust" value="Traditional crust">
+                    <label for="TraditionalCrust">Traditional crust</label><br>
+                    <input type="radio" id="ThinCrust" name="Crust" value="Thin crust">
+                    <label for="ThinCrust">Thin crust</label><br>
+                    <input type="radio" id="StuffedCrust" name="Crust" value="Stuffed crust">
+                    <label for="StuffedCrust">Stuffed crust</label><br>
+                    <input type="radio" id="ThickCrust" name="Crust" value="Thick crust">
+                    <label for="TThickCrust">Thick crust</label><br><br>
+
+                    <!--Asking the customer if they would like to add anything extra-->
+                    <label>Would you like to add something extra?</label><br>
+                    <input type="checkbox" id="extra1" name="extra1" value="Bacon">
+                    <label for="extra1"> Bacon</label><br>
+                    <input type="checkbox" id="extra2" name="extra2" value="Mozzarella">
+                    <label for="extra2"> Mozzarella</label><br>
+                    <input type="checkbox" id="extra3" name="extra3" value="Barbecue">
+                    <label for="extra3"> Barbecue</label><br><br>
+                
+                    <!--Asking the customer if he would like to eat in, whether it would be for take-out or delivery-->
+                    <label>Would you like to do:</label><br>
+                    <input type="radio" id="TakeOut" name="take" value="Take out">
+                    <label for="TakeOut">Take out</label><br>
+                    <input type="radio" id="EatIn" name="take" value="Eat-in">
+                    <label for="EatIn">Eat-in</label><br>
+                    <input type="radio" id="Delivery" name="take" value="Delivery">
+                    <label for="Delivery">Delivery</label><br><br>
+
+                    <!--Space to add notes about the order-->
+                    <label for="Notes">Observations about the order:</label><br>
+                    <textarea id="Notes" name="Notes" rows="4" cols="50" placeholder= "Add any relevant information regarding your order. Example, remove onion."></textarea>
+                    <br><br>
+                    
+                    <!--Collecting customer personal information-->
+                    <fieldset>
+                        <legend>Personal information:</legend>
+                        <label for="FirstName">First name:</label>
+                        <input type="text" id="FirstName" name="FirstName"><br><br>
+                        <label for="LastName">Last name:</label>
+                        <input type="text" id="LastName" name="LastName"><br><br>
+                        <label for="Email">Email:</label>
+                        <input type="email" id="Email" name="Email"><br><br>
+                        <label for="Birthday">Birthday:</label>
+                        <input type="date" id="Birthday" name="Birthday"><br><br>
+                        <label for="Telephone">Telephone</label>
+                        <input type="tel" id="Telephone" class="input-padrao" required placeholder="(xxx) xxx-xxxx"> 
+                    </fieldset>
+                    
+                    <br>
+                    
+                    <!--Payment Information-->
+                    <fieldset>
+                        <legend>Payment Information:</legend>
+                        <label for="NameCard">Name on Card:</label>
+                        <input type="text" id="NameCard" name="NameCard"><br><br>
+                        <label for="CardNumber">Credit card number:</label>
+                        <input type="text" id="CardNumber" name="CardName" required placeholder="1111-2222-3333-4444"><br><br>                      
+                        <label for="ExpMonth">Exp Month:</label>
+                        <input type="text" id="ExpMonth" name="ExpMonth"><br><br>
+                        <label for="CVV">CVV:</label>
+                        <input type="text" id="CVV" name="CVV" required placeholder="352"><br><br>
+                        <label for="ExpYear">Exp Year:</label>
+                        <input type="text" id="ExpYear" name="ExpYear" required placeholder="2023"><br><br>  
+                    </fieldset>
+                    
+                    <br>
+
+                    <!--Space to submit your order or reset it.-->
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Reset">
+                </form>
+            </section>    
+        </main>
+        <!-- Page-level footer -->
+		<footer>
+			<p><small>@ By Roselane Santos. All rights reserved.</small></p>
+		</footer>
+
+    </body>
+</html>

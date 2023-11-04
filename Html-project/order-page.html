@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Fountain Pen Gallery</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="micro site about a fountain pen gallery">
+    <meta name="Paulo de Castro, Josiane Souza, Roselane Santos" content="Fountain Pen Gallery">
+    <link rel="stylesheet" href='css/stylesheet.css' type='text/css'>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+  </head>
+  
+  <body>
+    <!-- Page-level header - MENU-->
+    <header>
+      <div class="title-bar"> <!--All barr-->
+        <div class="company-name"> <!--Only the Company name-->
+          <a href="index.html">Fountain Pen Gallery</a>
+        </div>
+        <div class="menu"> <!--Only the Items-->
+          <ul class="menu-items">
+            <li><a href="index.html">About</a></li>
+            <li><a href="order-page.html">Order</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    
+    <!-- Order Section -->
+    <main>
+      <div class="payment" id="cartContent">
+
+        <!--Section to display the product details-->
+        <div id="productDetailsSection">
+          <div class="selectedproduct">
+            <img src="" id="productImg" alt="Product Image">
+            <h2 id="productDescription"></h2>
+            <p id="productPrice"></p>
+          </div>
+
+          <form>
+          <fieldset>
+            <legend id="order"><strong>Place your order</strong></legend>  <!--first field set for choosing all information about the pen-->
+            <label for="number-of-pens">Quantity:</label><!--select number of pens-->
+            <input type="number" id="number-of-pens" name="number-of-pens" min="1" max="10" required>
+            <br><br>
+  
+            <label for="payment-method">Payment method</label>  <!--choose the payment method-->
+            <select id="payment-method" name="payment-method">
+              <option value="choose-an-option">Choose an option</option>
+              <option value="debit">Debit</option>
+              <option value="credit">Credit</option>
+            </select><br><br>
+          </fieldset>  
+          
+          <fieldset>
+            <legend><strong>Shipping: </strong> </legend>
+              
+              <label for="address">Address:</label>
+              <input type="text" id="address" name="address" required>
+              
+              <label for="city">City:</label>
+              <input type="text" id="city" name="city" required>
+              
+              <label for="province">Province:</label>
+              <select id="province" name="province" required>
+                <option value="" disabled selected>Select your province</option>
+                <option value="AB">Alberta</option>
+                <option value="BC">British Columbia</option>
+                <option value="MB">Manitoba</option>
+                <option value="NB">New Brunswick</option>
+                <option value="NL">Newfoundland and Labrador</option>
+                <option value="NS">Nova Scotia</option>
+                <option value="ON">Ontario</option>
+                <option value="PE">Prince Edward Island</option>
+                <option value="QC">Quebec</option>
+                <option value="SK">Saskatchewan</option>
+                <option value="NT">Northwest Territories</option>
+                <option value="NU">Nunavut</option>
+                <option value="YT">Yukon</option>
+              </select>
+              
+              <label for="postal-code">Postal Code:</label>
+              <input type="text" id="postal-code" name="postal-code" pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]" placeholder="A1A 1A1" required>
+              
+              <label for="country" hidden>Country:</label>
+              <input type="text" id="country" name="country" value="Canada" hidden>
+            </fieldset>
+            
+
+          <fieldset>
+            <legend><strong>Payment Information:</strong></legend>
+            <label for="NameCard">Name on Card:</label>
+            <input type="text" id="NameCard" name="NameCard"><br><br>
+  
+            <label for="CardNumber">Credit/Debit card number:</label>
+            <input type="text" id="CardNumber" name="CardName" required placeholder="1111-2222-3333-4444"><br>
+            <br>
+  
+            <label for="ExpMonth">Exp Month:</label>
+            <input type="text" id="ExpMonth" name="ExpMonth"><br>
+            <br>
+            
+            <label for="CVV">CVV:</label>
+            <input type="text" id="CVV" name="CVV" required placeholder="352"><br>
+            <br>
+            
+            <label for="ExpYear">Exp Year:</label>
+            <input type="text" id="ExpYear" name="ExpYear" required placeholder="2023"><br>
+            <br>
+          </fieldset>
+          </form>
+
+          <br>
+          <button class="bttOrderPage" type="submit" onclick="checkout()">Checkout</button>
+
+          <button class="clearCartButton" onclick="clearCart()">Clear Cart</button>
+        </div>
+      
+        <!--Section to display the message is the cart is empty-->
+        <div id="emptyCartSection">
+          <h2>Your Fountain Pen Gallery Cart is empty</h2>
+          <img src="img/empty-cart.png" alt="Empty Bag">
+          <p>Shop today's deals</p>
+          
+          <br>
+          <button class="bttGoToProduct" type="button" onclick="redirectToProducts()">Buy now</button>
+        </div>
+      
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <nav>
+        <a href="about/privacy-policy.php" title="Read our Privacy Policy">Privacy Policy</a> |
+        <a href="about/terms-of-use.php" title="Learn more about our terms of use">Terms of Use</a>
+      </nav>
+      <p><small>&copy; Fountain Pen Gallery</small></p>
+    </footer>
+
+    <script src="js/script.js"></script>
+  
+  </body>
+
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Fountain Pen Gallery</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="micro site about a fountain pen gallery">
+    <meta name="Paulo de Castro, Josiane Souza, Roselane Santos" content="Fountain Pen Gallery">
+    <link rel="stylesheet" href='css/stylesheet.css' type='text/css'>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+  </head>
+  
+  <body>
+    <!-- Page-level header - MENU-->
+    <header>
+      <div class="title-bar"> <!--All barr-->
+        <div class="company-name"> <!--Only the Company name-->
+          <a href="index.html">Fountain Pen Gallery</a>
+        </div>
+        <div class="menu"> <!--Only the Items-->
+          <ul class="menu-items">
+            <li><a href="index.html">About</a></li>
+            <li><a href="order-page.html">Order</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Page-level header - MAIN IMAGE AND COMPANY NAME-->
+      <div class="imgHeader">
+        <img src="img/picture-heading.jpg" alt="Fountain Pen">
+        <h1>Fountain Pen Gallery</h1>
+      </div>
+    </header>
+    
+    <!-- Page-level main content -->
+    <main>
+      <!--Div with all the content about the Company.-->
+      <section class="main-page">
+
+        <!--Image about-->
+        <div class="about-img" id="about">
+          <figure>
+            <img src="img/picture-about.jpg" class="picture-about" alt="picture about a fountain pen">
+          </figure>
+        </div>
+        
+        <!--About content-->
+        <div class="aboutGallery">
+          <h2 class="center-text">About our gallery</h2>
+          
+          <!--Break line-->
+          <br>
+          
+          <h5 class="center-text">Tradition since 1923</h5>
+          
+          <!--About Paragraph 1-->
+          <p class="about-paragraph1">
+            As technology has exponentially evolved in the past decade, it has greatly impacted people’s daily
+            life in different ways. However, the desire for stationery products with exceptional Quality, Uniqueness,
+            Creativity, and Beautiful Design has always remained inside the heart of every stationery lovers out there.
+          </p>
+          
+          <!--About Paragraph 2-->
+          <p class="about-paragraph2">
+            Fountain Pen Gallery is an online store based in Toronto, Canada. It was founded on July 18, 1923, by three
+            stationery enthusiasts, Josiane, Paulo, and Roselane, with the desire to bring to you all the top Quality
+            and Interesting Fountain Pen products around the world. With over 100 years of dealing with Canadian companies
+            through Fountain Pen Gallery work, our works impression is amazing for giving as a gift on special occasions.
+          </p>
+        </div>
+      </section>
+      
+      <!--Creates a subtle line between about and products.-->
+      <hr>
+      
+      <!--Our Products-->
+      <div class="our-product" id="ourProductSection">
+        <div class="product-catalog">
+          <h2>Product Catalog</h2>
+        </div>
+
+        <!--Product 1-->
+        <div class="product">
+          <img src="img/product_1.jpg" alt="Product 1">
+          
+          <p id="pdesc">Parker Ingenuity Fountain pen Core Gift box</p><br>
+          <p>$235.00</p>
+          <button class="bttIndex" onclick="addToCart('img/product_1.jpg', 'Parker Ingenuity Fountain pen Core Gift box', 235.00)">Add to cart</button>
+        </div>
+        
+        <!--Product 2-->
+        <div class="product">
+          <img src="img/product_2.jpg" alt="Product 2">
+          
+          <p id="pdesc">Pilot - Custom 74 Fountain Pen - Solid Blue - Soft Medium Nib</p>
+          <p>$265.00</p>
+          <button class="bttIndex" onclick="addToCart('img/product_2.jpg', 'Pilot - Custom 74 Fountain Pen - Solid Blue - Soft Medium Nib', 265.00)">Add to cart</button>
+        </div>
+
+        <!--Product 3-->
+        <div class="product">
+          <img src="img/product_3.jpg" alt="Product 3">
+          
+          <p id="pdesc">Duofold Classic Fountain Pen</p><br><br>
+          <p>$135.00</p>
+          <button class="bttIndex" onclick="addToCart('img/product_3.jpg', 'Duofold Classic Fountain Pen', 135.00)">Add to cart</button>
+        </div>
+
+        <!--Product 4-->
+        <div class="product">
+          <img src="img/product_4.jpg" alt="Product 4">
+          
+          <p id="pdesc">Parker Sonnet Special Edition Jubilee Fountain Pen</p><br>
+          <p>$175.00</p>
+          <button class="bttIndex" onclick="addToCart('img/product_4.jpg', 'Parker Sonnet Special Edition Jubilee Fountain Pen', 175.00)">Add to cart</button>
+        </div>
+
+        <!--Product 5-->
+        <div class="product">
+          <img src="img/product_5.jpg" alt="Product 5">
+         
+          <p id="pdesc">DSonnet Ciselé Fountain Pen</p><br><br>
+          <p>R$ 250.00</p>
+          <button class="bttIndex" onclick="addToCart('img/product_5.jpg', 'DSonnet Ciselé Fountain Pen', 250.00)">Add to cart</button>
+        </div>
+
+      </div> <!--Our Products-->
+
+    </main> <!-- End page content -->
+
+    <!-- Footer -->
+    <footer>
+      <nav>
+        <a href="about/privacy-policy.php" title="Read our Privacy Policy">Privacy Policy</a> |
+        <a href="about/terms-of-use.php" title="Learn more about our terms of use">Terms of Use</a>
+      </nav>
+      <p><small>&copy; Fountain Pen Gallery</small></p>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+  </body>
+
+</html>

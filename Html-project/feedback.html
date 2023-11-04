@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Fountain Pen Gallery</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="micro site about a fountain pen gallery">
+    <meta name="Paulo de Castro, Josiane Souza, Roselane Santos" content="Fountain Pen Gallery">
+    <link rel="stylesheet" href='css/stylesheet.css' type='text/css'>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+  </head>
+
+  <body>
+    <!-- Page-level header - MENU-->
+    <header>
+      <div class="title-bar"> <!--All barr-->
+        <div class="company-name"> <!--Only the Company name-->
+          <a href="index.html">Fountain Pen Gallery</a>
+        </div>
+        <div class="menu"> <!--Only the Items-->
+          <ul class="menu-items">
+            <li><a href="index.html">About</a></li>
+            <li><a href="order-page.html">Order</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    
+    <!-- Page-level main content -->
+    <main>
+      <!--Section with previously provided feedback-->
+      <section class="feedback-container">
+          <h2>Feedbacks</h2>
+          <article class="feedback-item">
+            
+            <h3>Josiane</h3>
+            <p>
+              "I'm absolutely delighted with the experience of writing with a fountain pen. 
+              The smoothness of the ink flow and the elegant strokes make every word feel like a work of art. 
+              I love the classic and sophisticated design of this pen, adding a touch of refinement to my writing.". ★★★★★
+            </p>
+          </article>
+          
+          <article class="feedback-item">
+            <h3>Paulo</h3>
+            <p>
+              "I recently purchased a fountain pen, and it's simply outstanding.
+              The precise nib allows me to have full control over the thickness of the lines, resulting in much neater handwriting. 
+              Moreover, the ergonomic grip makes writing for extended periods much more comfortable.". ★★★★★
+            </p>
+          </article>
+          
+          <article class="feedback-item">
+            <h3>Roselane</h3>
+            <p>
+              "As a handwriting enthusiast, I've been on the lookout for the perfect fountain pen, and I can confidently say I've found it.
+              The pen's quality materials and flawless performance have exceeded my expectations. 
+              I appreciate the ample ink capacity, enabling me to write for extended periods without needing a refill.". ★★★★★
+            </p>
+          </article>
+        </section>
+        
+        <!--Form for Feedback-->
+        <section class="form-container">
+          <h2>Leave your feedback</h2>
+          
+          <br>
+          <form action="#" method="post" id="feedbackForm">
+            <div>
+              <label for="username">Name:</label>
+              <input type="text" id="username" name="username" placeholder="Your name" required> <!-- Obligation-->
+            </div>
+
+            <br>
+            <div>
+              <label for="rating">Rating:</label>
+              <select id="rating" name="rating" required>
+                <option value="">Select a rating</option>
+                <option value="1">★☆☆☆☆</option>
+                <option value="2">★★☆☆☆</option>
+                <option value="3">★★★☆☆</option>
+                <option value="4">★★★★☆</option>
+                <option value="5">★★★★★</option>
+              </select>
+            </div>
+
+            <br>
+            <div>
+              <fieldset>
+                <legend>Feedback</legend>
+                <textarea id="feedback" name="feedback" rows="4" required></textarea>
+              </fieldset>
+            </div>
+
+            <br>
+            <button type="submit" id="bttFeedback">Submit</button>
+          </form>
+        </section>
+        <!--End of Form-->
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <nav>
+        <a href="about/privacy-policy.php" title="Read our Privacy Policy">Privacy Policy</a> |
+        <a href="about/terms-of-use.php" title="Learn more about our terms of use">Terms of Use</a>
+      </nav>
+      <p><small>&copy; Fountain Pen Gallery</small></p>
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>

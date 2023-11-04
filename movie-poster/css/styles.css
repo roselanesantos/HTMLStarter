@@ -1,0 +1,142 @@
+@charset "UTF-8";
+
+html {
+	background-image: url("../images/movie-poster.png");
+	background-repeat: no-repeat;
+	
+	background-size: 1200px;
+
+}
+body {
+	font-family: "Gloucester MT Extra Condensed" , Tahoma, Verdana;
+	padding-left: 15px;
+}
+
+main {
+	width: 1190px;
+	padding: 0 10px 0 0;
+}
+
+section.Reviews1 {
+	text-align: center;
+	padding-top: 20px;
+	width: 250px;
+}
+
+.rating {
+	color: white;
+	font-weight: bold;
+	font-size: 30px;
+}	
+
+section.Reviews2{
+	text-align: center;
+}
+
+section.Reviews3 {
+	text-align: center;
+	margin-bottom: 200px;
+	width: 250px;
+}
+
+section.Reviews4 {
+	text-align: center;
+	
+}
+
+.second-name{
+	color: white;
+	width: 250px;
+}
+
+section.actors {
+	text-align: left;
+	margin-left: 60px;
+}
+
+section.director {
+	text-align: left ;
+	color: red;
+	text-transform: uppercase;
+	font-weight: bold;
+	margin-left: 60px;
+	font-size: 20px;
+	
+}
+
+section.release-date {
+	text-align: left ;
+	color: white;
+	margin-left: 200px;
+}
+
+.actor-name {
+	font-weight: bold;
+	color: white;
+	text-transform: uppercase;	
+}
+
+.title{
+	text-transform: uppercase;	
+	font-weight: bold;
+	color: yellow;
+	font-size: 20px;
+	margin-left: 40px;
+
+}
+
+.actor-surname {
+	font-weight: bold;
+	color: yellow;
+}
+
+.upper{
+	text-transform: uppercase;	
+	font-weight: bold;
+	color: yellow;
+}
+
+.white{
+	color: white;
+	font-size: 40px;
+	margin-left: 60px;
+}
+
+.film-info{
+	margin-left: 90px;
+}
+
+section.social{
+	margin-left: 150px;
+	color: white;
+}
+
+aside {
+	position: absolute;
+	left: 970px;
+	top: 20px;
+}
+
+a:link {
+	color: yellow;
+	margin-left: 150px;
+}
+
+a:visited {
+	color:blue;
+}
+  
+/* mouse over link */
+a:hover {
+	color:yellow;
+}
+  
+/* selected link */
+a:active {
+	color:yellow;
+}
+footer p {
+	text-align: right;
+	color:white;
+	width: 1150px;
+}

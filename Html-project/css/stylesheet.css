@@ -1,0 +1,378 @@
+@charset "UTF-8";
+
+html {
+    box-sizing: border-box;
+    display: block;
+}
+
+/*1 - Body style start here*/
+body {
+    font-family: "Times New Roman", Georgia, Serif;
+    background: linear-gradient(90deg, rgba(255, 252, 252, 1) 10%, rgba(213, 204, 199, 1) 39%);
+    margin: 0 auto;
+    text-decoration: none;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/*Section titles*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Playfair Display";
+    letter-spacing: 5px;
+}
+
+/*2 - Header style*/
+/*2.1 - Menu bar*/
+.title-bar {
+    top: 0;
+    position: fixed;
+    background-color: white;
+    width: 100%;
+    padding: 15px;
+    letter-spacing: 4px;
+    display: flex; /*Add display: flex to place elements on the same line.*/
+    align-items: center; /*Vertically aligns items to the center.*/
+    overflow: hidden; /*Prevent elements inside it from being affected by floats.*/
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); /*Add a shadow to the bar in the menu.*/
+    height: 25px;
+    z-index: 1; /*To avoid overlap..*/
+}
+
+/*company-name = Fountain Pen Gallery*/
+.company-name{
+    padding: 0 0 0 15px;
+}
+/*About, Order and Feedback*/
+.menu {
+    text-align: right;
+    padding: 0 30px 0 0;
+}
+
+/*company-name = Fountain Pen Gallery | menu = About, Order and Feedback*/
+.company-name,
+.menu {
+    flex: 1;
+}
+
+.menu-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-items li {
+    display: inline-block;
+    margin-right: 30px;
+}
+
+/*Add shadow on hover*/
+.company-name a:hover,
+.menu-items a:hover {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/*Remove underline from menu.*/
+a {
+    text-decoration: none;
+    color: #474747;
+}
+
+/*2.2 - image Header*/
+.imgHeader {
+    padding-top: 50px;
+    height: 660px;
+    overflow: hidden;
+}
+
+.imgHeader h1 {
+    position: absolute;
+    bottom: 0;
+    left: 30px;
+    color: #474747;
+}
+
+.imgHeader img {
+    width: 100%;
+}
+/*End of [2] - Header style*/
+
+/*_______________________________________________________________________________________________________*/
+
+/*3 - Main style*/
+
+/*3.1 - Container | Div class="about-container"*/
+
+main {
+    line-height: 1.5;
+    align-items: center;
+	display: flex;
+    flex-direction: column;
+    padding: 0.1em;
+
+    min-width: 640px;
+	max-width: 1500px;
+}
+
+main .main-page {
+    padding: 2.5em;
+    display: flex; /*Place the text and the image on the same line*/
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutGallery{
+    padding: 1em 6em 4em 0;
+    font-size: 1rem;
+}
+
+.about-img,
+.aboutGallery {
+    flex: 1;
+    box-sizing: border-box;
+    
+}
+
+/*Set only the image*/
+.about-img img {
+    width: 100%;
+    height: auto;
+}
+
+section h2,
+.our-product h2 {
+    color: #474747;
+    font-size: 1.8rem;
+}
+
+.center-text {
+    text-align: center;
+}
+
+/*End of [3.1] - Container | Div class="about-container"*/
+
+/*_______________________________________________________________________________________________________*/
+
+/*3.2 - Container | div class="our-product"*/
+/*Products*/
+.our-product {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product-catalog {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    width: 200px;
+    text-align: center;
+    
+}
+
+#pdesc{
+    font-weight: bold;
+}
+
+/*Index button configuration*/
+.bttIndex {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: auto;
+    width: 120px;
+    transform: translateX(35%);
+}
+
+button:hover {
+    background-color: #444;
+}
+
+/*End of [3] - Main style*/
+
+/*Footer style*/
+footer {
+    text-align: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    color: #000;
+    background-color: #f1f1f1;
+}
+
+/*End of [3.2] - Container | div class="our-product"*/
+
+/*_______________________________________________________________________________________________________*/
+
+/*FEEDBACK*/
+
+.feedback-container h2,
+.form-container h2 {
+    display: flex;/*used to build flexbox. Flex can build one dimension layout which is better than float based layout.*/
+    justify-content: center;
+    margin: 0;
+}
+
+.feedback-item h3 {
+    margin: 0;
+}
+
+.feedback-container {
+    width: 750px;
+    margin-top: 7em;
+    margin-bottom: 1em;
+}
+
+.feedback-item {
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin: 10px;
+}
+
+.feedback-container,
+.form-container {
+    display: flex;
+    flex-direction: column; /*So that the items are one below the other.*/
+}
+
+.form-container {
+    width: 735px;
+    margin-top: 1em;
+    margin-bottom: 2em;
+    box-sizing: border-box; /*This element does not allow the padding to change the size of the section in which the form is inserted.*/
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/*Configuration Order-page and Feedback button.*/
+#bttFeedback,
+.bttOrderPage,
+.clearCartButton {
+    float: left;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: auto;
+    width: 120px;
+}
+
+
+/*End of FEEDBACK Container*/
+
+/*_______________________________________________________________________________________________________*/
+
+/*ORDER-PAGE*/
+
+.selectedproduct {
+    display: flex;/*used to build flexbox. Flex can build one dimension layout which is better than float based layout.*/
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+/*Set only the div with the empty cart content*/
+#productDetailsSection {
+    width: 750px;
+    margin-top: 7em;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /*Sets the div to occupy the height of the screen.*/
+}
+
+#emptyCartSection {
+    width: 750px;
+    margin-top: 7em;
+    margin-bottom: 1em;
+    height: 75vh; /*Sets the div to occupy the height of the screen.*/
+}
+
+#emptyCartSection img {
+    margin-left: 4em;
+}
+
+#emptyCartSection button {
+    margin-left: 24.5em;
+}
+
+#emptyCartSection img,
+#emptyCartSection h2,
+#emptyCartSection p,
+#emptyCartSection button {
+    text-align: center;
+}
+
+.bttGoToProduct {
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    font-family: 'Helvetica', sans-serif;
+}
+
+.bttGoToProduct:hover {
+    background-color: #e0e0e0;
+}
+
+.payment p {
+    font-family: 'Helvetica', sans-serif;
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.clearCartButton {
+    transform: translateX(422%);
+}
+
+/*End of ORDER-PAGE Container*/
+
+/*The text-decoration property is mostly used to remove underlines from links:*/
+
+a:link {
+    text-decoration: none;/* a normal, unvisited link*/
+}
+  
+a:visited {
+    text-decoration: none;/* a link the user has visited*/
+}
+  
+a:hover {
+    text-decoration: none;/* a link when the user mouses over it*/
+}
+  
+a:active {
+    text-decoration: none;/* a link the moment it is clicked*/
+}
+
